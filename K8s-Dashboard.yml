@@ -98,7 +98,7 @@ rules:
     resourceNames: ["kubernetes-dashboard-settings"]
     verbs: ["get", "update"]
     # Allow Dashboard to get metrics.
-    - apiGroups: [""]
+  - apiGroups: [""]
     resources: ["services"]
     resourceNames: ["heapster", "dashboard-metrics-scraper"]
     verbs: ["proxy"]
@@ -117,7 +117,7 @@ metadata:
   name: kubernetes-dashboard
 rules:
   # Allow Metrics Scraper to get metrics from the Metrics server
-    - apiGroups: ["metrics.k8s.io"]
+  - apiGroups: ["metrics.k8s.io"]
     resources: ["pods", "nodes"]
     verbs: ["get", "list", "watch"]
 
